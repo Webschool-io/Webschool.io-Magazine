@@ -1,6 +1,5 @@
 # Webschool.io-Magazine
-Modelo das nossas revistas
-
+Modelo das revistas da [Webschool.io](http://webschool.io/).
 
 ## Seções
 
@@ -16,4 +15,6 @@ As vagas devem sair ou dos grupos específicos para isso como:
 
 Além disso toda edição terá uma **[issue](https://github.com/Webschool-io/Webschool.io-Magazine/issues)** fixa para submissão de vagas pela comunidade.
 
+
+## Revistas
 
