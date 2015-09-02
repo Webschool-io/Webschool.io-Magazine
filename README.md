@@ -71,5 +71,6 @@ Existirão diversas revistas dos mais diversos assuntos, como:
 - Internet das Coisas;
 - Games;
 - Eletrônica.
+- Git e GitHub
 
 Caso um assunto que você deseja não esteja nessa lista pode nos enviar [por aqui](https://github.com/Webschool-io/Webschool.io-Magazine/issues/1).
