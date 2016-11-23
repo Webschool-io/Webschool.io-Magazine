@@ -1,0 +1,47 @@
+body {
+  padding: 0.5rem;
+}
+.primary-text {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.secondary-text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.primary-img {
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 1rem;
+  }
+  .primary-text {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
+  .secondary-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 1.5rem;
+  }
+  .primary-text {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .secondary-text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
