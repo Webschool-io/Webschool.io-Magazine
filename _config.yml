@@ -1,0 +1,62 @@
+# Site settings
+description: "Para e pela comunidade!"
+baseurl: ""
+url: ""
+icon: https://raw.githubusercontent.com/CodeShareEducation/CodeShareEducation.github.io/master/src/img/icons/favicon.ico
+
+# User settings
+username: Webschool Magazine
+user_description: Para e pela comunidade!
+user_title: Para e pela comunidade!
+user_gravatar:
+email: magazine@webschool.io
+github_username: WebSchool.io
+gplus_username:
+twitter_username:
+disqus_username: webschoolmagazine
+
+authors:
+  wendell:
+    name: Wendell Adriel
+    gravatar: d36a082aacb53b6f76869748fb4b81d4
+    email: contact@wendelladriel.com
+    github: WendellAdriel
+    linkedin: wendelladrielti/en
+    twitter: wendell_adriel
+    facebook: wendell.adriel.7
+    site: http://wendelladriel.com
+    bio: "Criador da CodeShare, Desenvolvedor Full Stack, Zend Certified PHP Engineer,
+    Graduado em Análise e Desenvolvimento de Sistemas, Gamer, Baixista e baterista. Trabalho com desenvolvimento desktop
+    e web desde 2009 e com desenvolvimento mobile desde 2015. Gosto de sempre aprimorar e atualizar meus conhecimentos e
+    também trocar experiências e conhecimentos com os que estão à minha volta. Gosto de trabalhar com desenvolvimento
+    Front-end e Back-end. Trabalho com diversas tecnologias e você pode conferir a lista completa de minhas skills em meu site pessoal."
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Magazines
+    url: /magazines
+  - title: Sobre
+    url: /about
+  - title: Webschool
+    url: http://webschool.io
+    external: true
+
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']

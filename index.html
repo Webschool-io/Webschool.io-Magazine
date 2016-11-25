@@ -1,55 +1,49 @@
-<!DOCTYPE html>
- <html>
-   <head>
-     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+---
 
-     <!-- Favicon -->
-     <link rel="shortcut icon" href="./assets/img/icons/favicon.ico" type="image/x-icon" />
-     <!-- Apple Touch Icons -->
-     <link rel="apple-touch-icon" href="./assets/img/icons/apple-touch-icon.png" />
-     <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/icons/apple-touch-icon-57x57.png" />
-     <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/icons/apple-touch-icon-72x72.png" />
-     <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/icons/apple-touch-icon-114x114.png" />
-     <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/icons/apple-touch-icon-144x144.png" />
-     <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/icons/apple-touch-icon-60x60.png" />
-     <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/icons/apple-touch-icon-120x120.png" />
-     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/icons/apple-touch-icon-76x76.png" />
-     <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/icons/apple-touch-icon-152x152.png" />
-     <!-- Windows 8 Tile Icons -->
-     <meta name="application-name" content="Webschool Magazine">
-     <meta name="msapplication-TileColor" content="#374e59">
-     <meta name="msapplication-square70x70logo" content="smalltile.png" />
-     <meta name="msapplication-square150x150logo" content="mediumtile.png" />
-     <meta name="msapplication-square310x310logo" content="largetile.png" />
-     <!-- Android Lolipop Theme Color -->
-     <meta name="theme-color" content="#374e59">
+<main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+    {% for post in site.posts %}
+        <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+                <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
+                    <meta itemprop="datePublished" content="{{post.date}}">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        <span class="day">
+                            {{ post.date | date: "%d" }}
+                        </span>
+                        <span class="month-year">
+                            {% assign m = post.date | date: "%-m" %}
+                            {% case m %}
+                              {% when '1' %}Janeiro
+                              {% when '2' %}Fevereiro
+                              {% when '3' %}Março
+                              {% when '4' %}Abril
+                              {% when '5' %}Maio
+                              {% when '6' %}Junho
+                              {% when '7' %}Julho
+                              {% when '8' %}Agosto
+                              {% when '9' %}Setembro
+                              {% when '10' %}Outubro
+                              {% when '11' %}Novembro
+                              {% when '12' %}Dezembro
+                          {% endcase %}
+                          de {{ post.date | date: "%Y" }}
+                        </span>
+                    </time>
+                </a>
+                <div class="content">
+                    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
+                    <p class="description">
+                        {{ post.content | strip_html | truncatewords:40 }}
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="link">Continue lendo esse artigo! :D</a>
+                    </p>
 
-     <link rel="stylesheet" href="./assets/css/materialize.min.css"/>
-     <link rel="stylesheet" href="./assets/css/main.css"/>
-
-     <title>Webschool Magazine | Para e pela comunidade</title>
-     <meta name="description" content="Para e pela comunidade">
-     <link rel="author" href="https://plus.google.com/+WendellAdriel?rel=author">
-     <link rel="canonical" href="http://webschool.io/magazine">
-     <link rel="manifest" href="{{ "./assets/manifest.json" }}">
-   </head>
-
-   <body>
-     <div class="container">
-       <header>
-         <img class="responsive-img primary-img" src="./assets/img/blog-image.png" alt="Webschool Magazine">
-       </header>
-       <main>
-         <section>
-           <p class="center-align primary-text">Prepare-se para o quem vem por aí!!!</h1>
-           <hr>
-           <p class="center-align secondary-text">Grandes novidades em breve...</h2>
-         </section>
-       </main>
-     </div>
-     <script src="./assets/js/jquery.min.js"></script>
-     <script src="./assets/js/materialize.min.js"></script>
-   </body>
- </html>
+                    <div class="tags">
+                        {% for tag in post.tags %}
+                            <a href="{{ baseurl }}/tags/#{{tag | slugify }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+        </article>
+    {% endfor %}
+</main>
