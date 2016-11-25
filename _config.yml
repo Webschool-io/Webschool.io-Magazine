@@ -1,6 +1,6 @@
 # Site settings
 description: "Para e pela comunidade!"
-baseurl: ""
+baseurl: "/Webschool.io-Magazine/"
 url: ""
 icon: https://raw.githubusercontent.com/CodeShareEducation/CodeShareEducation.github.io/master/src/img/icons/favicon.ico
 
